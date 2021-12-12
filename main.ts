@@ -8,7 +8,6 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.AB, function () {
-    strip.clear()
     if (Mode >= 6) {
         Mode = 0
     } else {
@@ -23,6 +22,7 @@ input.onGesture(Gesture.Shake, function () {
     setMode()
 })
 function setMode () {
+    strip.clear()
     if (Mode == 0) {
         strip.showRainbow(1, 360)
     } else if (Mode == 1) {
